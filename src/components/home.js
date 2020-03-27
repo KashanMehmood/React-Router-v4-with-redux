@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+import {changeState} from '../store/action/action';
 
 class Home extends Component {
 
     _changeData(){
-        console.log('event called');
+        // console.log('event called');
+        // changeState();
+        this.props.changeStateToReducer();
+        // this.props.changeUserName();
     }
 
     render() {
@@ -24,9 +28,12 @@ function mapStateToProps(state){
         userName: state.rootReducer.userName
     })
 }
-function mapDispatchToProps(state){
+function mapDispatchToProps(dispatch){
     return({
-        
+        changeStateToReducer: () =>{
+            dispatch(changeState())
+        }
+        // changeUserName: ()=>{dispatch(changeUserName())}
     })
 }
 
