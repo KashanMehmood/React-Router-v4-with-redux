@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 class Home extends Component {
 
@@ -18,5 +19,15 @@ class Home extends Component {
     }
 }
 
-export default Home;
+function mapStateToProps(state){
+    return({
+        userName: state.rootReducer.userName
+    })
+}
+function mapDispatchToProps(state){
+    return({
+        
+    })
+}
 
+export default connect(mapStateToProps,mapDispatchToProps)(Home);

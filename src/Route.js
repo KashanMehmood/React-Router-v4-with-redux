@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Route, Router } from 'react-router-dom';
 import Home from './components/home';
 import About from './components/about';
-import createBrowserHistory from 'history/createBrowserHistory'
+// import createBrowserHistory from 'history/createBrowserHistory'
 
-const history = createBrowserHistory()
+// const history = createBrowserHistory()
+import history from './History.js'
 
 class Routers extends Component {
     render() {
