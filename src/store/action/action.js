@@ -1,7 +1,8 @@
+import actionTypes from '../constant/constant';
+
 export function changeState(updatedUserName){
     return dispatch => {
-        dispatch({type:'CHANGEUSERNAME', payload: updatedUserName})
+        dispatch({type: actionTypes.CHANGEUSERNAME, payload: updatedUserName})
         // console.log("kashaaa");
     }
-    
 }
