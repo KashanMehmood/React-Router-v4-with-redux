@@ -1,5 +1,6 @@
 const actionTypes = {
-    CHANGEUSERNAME:'CHANGEUSERNAME'
+    CHANGEUSERNAME:'CHANGEUSERNAME',
+    CHANGEUSERAGE:'CHANGEUSERAGE'
 }
 
 export default actionTypes;

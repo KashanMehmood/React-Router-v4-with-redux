@@ -7,6 +7,8 @@ class About extends Component {
         return (
             <div>
                 <h1>Hello About {this.props.userName}</h1>
+                <h1>Hello World {this.props.userAge}</h1>
+
                 <Link to='/'>Go to Home</Link>
             </div>
         )
@@ -15,7 +17,8 @@ class About extends Component {
 
 function mapStateToProps(state){
     return({
-        userName: state.rootReducer.userName
+        userName: state.rootReducer.userName,
+        userAge: state.rootReducer.userAge
     })
 }
 function mapDispatchToProps(state){

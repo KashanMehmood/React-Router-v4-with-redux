@@ -10,3 +10,5 @@ Redux
     b. npm install --save react-router-redux
     c. npm i --save redux-logger
     d. npm install --save redux-thunk
+
+3.  https://www.freecodecamp.org/news/how-to-use-redux-in-reactjs-with-real-life-examples-687ab4441b85/
