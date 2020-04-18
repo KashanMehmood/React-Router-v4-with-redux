@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import {connect} from 'react-redux';
-import {changeState} from '../store/action/action';
+import { connect } from 'react-redux';
+import { changeState } from '../store/action/action';
 
 class Home extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             userName: ''
@@ -14,11 +14,11 @@ class Home extends Component {
         this._changeInput = this._changeInput.bind(this);
     }
 
-    _changeData(){
+    _changeData() {
         this.props.changeStateToReducer(this.state.userName);
     }
 
-    _changeInput(event){
+    _changeInput(event) {
 
         console.log(event.target.value);
         this.setState({
@@ -41,18 +41,21 @@ class Home extends Component {
     }
 }
 
-function mapStateToProps(state){
-    return({
+// mapStateToProps: this is used to retrieve the store state
+function mapStateToProps(state) {
+    return ({
         userName: state.rootReducer.userName
     })
 }
-function mapDispatchToProps(dispatch){
-    return({
-        changeStateToReducer: (updatedUserName) =>{
+
+// mapDispatchToProps: this is used to retrieve the actions and dispatch them to the store
+function mapDispatchToProps(dispatch) {
+    return ({
+        changeStateToReducer: (updatedUserName) => {
             dispatch(changeState(updatedUserName))
         }
         // changeUserName: ()=>{dispatch(changeUserName())}
     })
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
