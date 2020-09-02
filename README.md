@@ -12,3 +12,5 @@ Redux
     d. npm install --save redux-thunk
 
 3.  https://www.freecodecamp.org/news/how-to-use-redux-in-reactjs-with-real-life-examples-687ab4441b85/
+
+4. http://jamesknelson.com/can-i-dispatch-multiple-actions-from-redux-action-creators/
